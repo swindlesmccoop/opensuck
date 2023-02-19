@@ -8,7 +8,7 @@ _conv() {
 }
 
 _help() {
-	printf "Help function.\n"
+	printf "Usage: convert.sh [program]\nSee README.md for more details.\n"
 	exit 1
 }
 
