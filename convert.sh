@@ -19,6 +19,10 @@ esac
 
 printf "Please input path to the build you wish to convert (can be relative or absolute): "
 read -r SUCKPATH
+[ -d "$SUCKPATH" ] || {
+	printf "\033[0;31mError: directory does not exist.\033[0m\n"
+	exit 1
+}
 
 case "$1" in
 	dwm) _conv config.mk dwm_config.mk ;;
